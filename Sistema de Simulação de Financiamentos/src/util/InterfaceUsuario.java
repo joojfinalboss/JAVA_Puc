@@ -4,23 +4,46 @@ public class InterfaceUsuario {
     public static double pedirValorImovel(){
         Scanner scanner = new Scanner(System.in);
         double valorImovel = 0;
-        boolean semErro = true;
+        boolean pedirEntrada = true;
 
-        while (semErro == true);
-            System.out.println("Digite o valor do imóvel:\t");
-            double valorDigitado = scanner.nextDouble();
-            if (valorDigitado >= 0) {
-                valorImovel = valorDigitado;
-                semErro = false;
-            } else {
+        while (pedirEntrada == true){
+            try {
+                System.out.println("Digite o valor do imóvel:\t");
+                valorImovel = scanner.nextDouble();
+                if (valorImovel >= 0) {
+                    pedirEntrada = false;
+                    return valorImovel;
+                } else {
+                    System.out.println("Valor inválido.");
+            }
+            } catch (Exception e) {
+                scanner.nextLine();
                 System.out.println("Valor inválido.");
             }
+
+        }
+
         return valorImovel;
     }
     public static int pedirPrazoFinanciamento(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o prazo de financiamento em anos:\t");
-        int prazoFinanciamento = scanner.nextInt();
+        int prazoFinanciamento = 0;
+        boolean pedirEntrada = true;
+        while (pedirEntrada == true){
+            try {
+                System.out.println("Digite o prazo de financiamento em anos:\t");
+                prazoFinanciamento = scanner.nextInt();
+                if (prazoFinanciamento >= 0) {
+                    pedirEntrada = false;
+                    return prazoFinanciamento;
+                } else {
+                    System.out.println("Valor inválido.");
+                } 
+            } catch (Exception e) {
+                scanner.nextLine();
+                System.out.println("Valor Inválido");
+                }
+        }
         
         return prazoFinanciamento;
     }
