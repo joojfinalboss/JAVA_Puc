@@ -49,8 +49,24 @@ public class InterfaceUsuario {
     }
     public static double pedirTaxaJurosAnual(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o valor da taxa de juros anual:\t");
-        double taxaJurosAnual = scanner.nextDouble();
+        double taxaJurosAnual = 0;
+        boolean pedirEntrada = true;
+        while (pedirEntrada ==true){
+            try {
+                System.out.println("Digite o valor da taxa de juros anual:\t");
+                taxaJurosAnual = scanner.nextDouble();
+                if (taxaJurosAnual >= 0){
+                    pedirEntrada = false;
+                    return taxaJurosAnual;
+                } else {
+                    System.out.println("Valor Inválido");
+                }
+            } catch (Exception e) {
+                scanner.nextLine();
+                System.out.println("Valor Inválido");
+            }
+        }
+
         return taxaJurosAnual;
     }
 }
