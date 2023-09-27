@@ -47,9 +47,10 @@ public class Financiamento {
         return pagamentoTotal;
     }
 
-    public void exibirDadosFinanciamento(double valorImovel, double pagamentoTotal){
-        System.out.println("O valor do imóvel é: " + valorImovel);
-        System.out.println("O valor total do financiamento é: " + pagamentoTotal);
+    public void exibirDadosFinanciamento(double valorImovel, double pagamentoMensal, double pagamentoTotal){
+        System.out.println(String.format("O valor do imóvel é: %.2fR$ ", valorImovel));
+        System.out.println(String.format("O valor do pagamento mensal é: %.2fR$", pagamentoMensal));
+        System.out.println(String.format("O valor total do financiamento é: %.2fR$", pagamentoTotal));
     }
     
 }

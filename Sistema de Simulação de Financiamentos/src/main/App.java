@@ -16,6 +16,6 @@ public class App {
         // Calcula os valores de financiamento do objeto criado
         double pagamentoMensal = FinanciamentoAtual.calcularPagamentoMensal();
         double pagamentoTotal = FinanciamentoAtual.calcularPagamentoTotal(pagamentoMensal);
-        FinanciamentoAtual.exibirDadosFinanciamento(valorImovel, pagamentoTotal);
+        FinanciamentoAtual.exibirDadosFinanciamento(valorImovel, pagamentoMensal, pagamentoTotal);
     }
 }

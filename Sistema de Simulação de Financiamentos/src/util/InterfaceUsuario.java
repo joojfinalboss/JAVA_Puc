@@ -1,6 +1,12 @@
 package util;
 import java.util.Scanner;
 public class InterfaceUsuario {
+
+    /* Métodos para solicitar e validar entrada de dados.
+    Todos validam se o tipo de input é válido (já tratando a exceção)
+    e validam se o valor inserido é positivo.
+    */
+
     public static double pedirValorImovel(){
         Scanner scanner = new Scanner(System.in);
         double valorImovel = 0;
