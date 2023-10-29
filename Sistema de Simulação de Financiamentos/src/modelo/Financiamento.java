@@ -7,6 +7,13 @@ public class Financiamento {
     private double taxaJurosAnual;
 
     // Métodos construtores
+
+    public Financiamento(double valorImovel, int prazoFinanciamento, double taxaJurosAnual){
+        this.valorImovel = valorImovel;
+        this.prazoFinanciamento = prazoFinanciamento;
+        this.taxaJurosAnual = taxaJurosAnual;
+    }
+
     public void setValorImovel(double valorImovel){
         this.valorImovel = valorImovel;
     }
@@ -39,7 +46,7 @@ public class Financiamento {
 
     // Métodos Geral;
     public double calcularPagamentoMensal(){
-        double pagamentoMensal = (valorImovel / prazoFinanciamento) * (1 + taxaJurosAnual / 12);
+        double pagamentoMensal = ((valorImovel / prazoFinanciamento)) * (1 + (taxaJurosAnual / 12));
         return pagamentoMensal;
     }
     public double calcularPagamentoTotal(double pagamentoMensal){
